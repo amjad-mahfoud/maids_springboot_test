@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @Entity
 @Table
-public class Product {
+public class Product extends Client {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(
