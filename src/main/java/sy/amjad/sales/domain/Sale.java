@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @Entity
 @Table
-public class Sale extends SaleTransaction {
+public class Sale {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(

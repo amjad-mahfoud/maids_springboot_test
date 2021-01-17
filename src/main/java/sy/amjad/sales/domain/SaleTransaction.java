@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Entity
 @Table
-public class SaleTransaction extends Product {
+public class SaleTransaction{
 
     @Id
     @GeneratedValue(generator = "UUID")

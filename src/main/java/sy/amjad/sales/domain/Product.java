@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @Entity
 @Table
-public class Product extends Client {
+public class Product {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(
@@ -35,13 +35,6 @@ public class Product extends Client {
     private Set<SaleTransaction> transactionSet;
 
     public Product() {
-    }
-
-    public Product(String name, String description, String category, LocalDate creationDate) {
-        this.name = name;
-        this.description = description;
-        this.category = category;
-        this.creationDate = creationDate;
     }
 
     public UUID getId() {

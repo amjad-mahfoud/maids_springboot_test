@@ -37,13 +37,6 @@ public class Client {
     public Client() {
     }
 
-    public Client(String name, String lastName, String mobile) {
-        this.id = UUID.randomUUID();
-        this.name = name;
-        this.lastName = lastName;
-        this.mobile = mobile;
-    }
-
     public UUID getId() {
         return id;
     }
@@ -75,17 +68,6 @@ public class Client {
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
-
-    @Override
-    public String toString() {
-        return "Client{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", mobile='" + mobile + '\'' +
-                '}';
-    }
-
 
     public Set<Product> getProducts() {
         return products;
