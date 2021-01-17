@@ -3,6 +3,7 @@ package sy.amjad.sales.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import sy.amjad.sales.domain.Sale;
+import sy.amjad.sales.dtos.SaleWithTransactionDto;
 import sy.amjad.sales.services.ISaleService;
 
 import java.util.List;
@@ -35,5 +36,10 @@ public class SaleController implements IBaseController<Sale> {
     @PostMapping
     public Sale add(@RequestBody Sale entity){
         return service.add(entity);
+    }
+
+    @PostMapping(path = "add_sale_with_transaction")
+    public Sale addSaleWithMultipleTransactions(@RequestBody SaleWithTransactionDto entity){
+        return service.addSaleWithTransaction(entity);
     }
 }

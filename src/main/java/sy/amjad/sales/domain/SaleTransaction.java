@@ -21,6 +21,12 @@ public class SaleTransaction{
     @Type(type = "uuid-char")
     private UUID id = UUID.randomUUID();
 
+    private Long total;
+    private Long quantity;
+
+    public SaleTransaction() {
+    }
+
     public Long getTotal() {
         return total;
     }
@@ -53,9 +59,6 @@ public class SaleTransaction{
         this.product = product;
     }
 
-    private Long total;
-    private Long quantity;
-
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "sale_id", nullable = false)
@@ -64,10 +67,6 @@ public class SaleTransaction{
     @ManyToOne
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
-
-
-    public SaleTransaction() {
-    }
 
     public UUID getId() {
         return id;
